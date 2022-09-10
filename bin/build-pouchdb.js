@@ -77,7 +77,7 @@ function doRollup(input, browser, formatsToFiles) {
     input: addPath('pouchdb', input),
     external: external,
     plugins: rollupPlugins({
-      jsnext: true,
+      // mainFields: ['module', 'main'],
       browser: browser,
       main: false  // don't use "main"s that are CJS
     })
