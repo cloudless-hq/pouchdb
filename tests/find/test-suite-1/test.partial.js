@@ -33,10 +33,10 @@ describe('test.partial.js', function () {
       selector: { hello: 'world' },
       use_index: ['_design/test-partial', 'type-x']
     });
-      result.docs.should.have.length(1);
-      const [{ _id: id, type, hello }] = result.docs;
-      id.should.equal('a');
-      type.should.equal('x');
-      hello.should.equal('world');
-    });
+    result.docs.should.have.length(1);
+    const [{ _id: id, type, hello }] = result.docs;
+    id.should.equal('a');
+    type.should.equal('x');
+    hello.should.equal('world');
   });
+});
