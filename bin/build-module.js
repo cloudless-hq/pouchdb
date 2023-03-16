@@ -74,7 +74,7 @@ function buildModule(filepath) {
         input: path.resolve(filepath, './src/index.js'),
         external: depsToSkip,
         plugins: rollupPlugins({
-          // mainFields: ['module', 'main'],
+          jsnext: true,
           browser: isBrowser || forceBrowser
         })
       }).then(function (bundle) {
